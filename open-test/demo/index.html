@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../open-test.js';
+
+    const title = 'Hello owc World!';
+    render(
+      html`
+        <open-test .title=${title}>
+          some light-dom
+        </open-test>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
